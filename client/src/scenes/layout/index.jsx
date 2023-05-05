@@ -16,9 +16,17 @@ const Layout = () => {
   return (
     <Box display={isNonMobile ? "flex" : "block"} width='100%' height='100%'>
       {/* Toogle sidebar */}
-      <Sidebar isNonMobile={isNonMobile} drawerWidth="250px" isSidebarOpen={isSidebarOpen} setIsSideBarOpen={setIsSideBarOpen} />
+      <Sidebar 
+        isNonMobile={isNonMobile} 
+        drawerWidth="250px" 
+        isSidebarOpen={isSidebarOpen} 
+        setIsSideBarOpen={setIsSideBarOpen} 
+      />
       <Box>
-          <Navbar isSidebarOpen={isSidebarOpen} setIsSideBarOpen={setIsSideBarOpen} />
+          <Navbar 
+            isSidebarOpen={isSidebarOpen} 
+            setIsSideBarOpen={setIsSideBarOpen} 
+          />
           <Outlet />
       </Box>
     </Box>

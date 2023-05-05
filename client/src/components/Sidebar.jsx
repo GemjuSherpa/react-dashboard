@@ -96,7 +96,7 @@ const Sidebar = ({
   user,
   drawerWidth,
   isSidebarOpen,
-  setIsSidebarOpen,
+  setIsSideBarOpen,
   isNonMobile,
 }) => {
   const { pathname } = useLocation();
@@ -113,7 +113,7 @@ const Sidebar = ({
       {isSidebarOpen && (
         <Drawer
           open={isSidebarOpen}
-          onClose={() => setIsSidebarOpen(false)}
+          onClose={() => setIsSideBarOpen(false)}
           variant="persistent"
           anchor="left"
           sx={{
@@ -132,11 +132,11 @@ const Sidebar = ({
               <FlexBetween color={theme.palette.secondary.main}>
                 <Box display="flex" alignItems="center" gap="0.5rem">
                   <Typography variant="h4" fontWeight="bold">
-                    ECOMVISION
+                    DASHBOARD
                   </Typography>
                 </Box>
                 {!isNonMobile && (
-                  <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+                  <IconButton onClick={() => setIsSideBarOpen(!isSidebarOpen)}>
                     <ChevronLeft />
                   </IconButton>
                 )}
@@ -193,9 +193,9 @@ const Sidebar = ({
             </List>
           </Box>
         </Drawer>
-        )}
-        </Box>
-    )
+      )}
+    </Box>
+  )
 }
 
 export default Sidebar
